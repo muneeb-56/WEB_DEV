@@ -10,26 +10,50 @@
        .container{
         border: 2px solid rgb(154, 11, 11);
         display: grid;
-        grid-template-columns: [fcol] 120px [scol] 100px;
-        grid-template-rows: [frow] 100px [srow] 100px [trow] 100px;
+        height: 50vh;
+        /* grid-template-areas: "nav nav nav"
+                             "side article article"
+                             "footer footer footer"
+                             ; */
+
+        grid-template-columns: 1fr 2fr 3fr 1fr;
+        /* grid-template-rows: repeat(4, 2fr); */
+        grid-template-rows: repeat(4, minmax(1fr, 5fr));
+        row-gap: 5px;
+        column-gap: 20px;
+        /* justify-items: center; */
+        align-items: center;
+
        }
 
        .item{
         border: 2px solid rgb(33, 139, 10);
         border-radius: 10px;
-        height: 55px;
-        width: 55px;
+        
        }
-
-       .item1{
-        grid-row: frow/2;
-        grid-column: 1/scol;
+       /* .item1{
+        grid-area: nav;
+        background-color: bisque;
        }
-
+       .item2{
+        grid-area: side;
+        background-color: aqua;
+       }
+       .item3{
+        grid-area: article;
+        background-color: darkgreen;
+       }
        .item4{
-        grid-row: 1/2;
-        grid-column: 1/2;
-       }
+        grid-area: footer;
+        background-color: black;
+       } */
+
+       /* overlap */
+       /* .item5{
+        grid-area: nav;   
+       } */
+
+
     </style>
 </head>
 
@@ -37,10 +61,10 @@
 
     <div class="container">
         <div class="item item1">1</div>
-        <div class="item">2</div>
-        <div class="item">3</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
         <div class="item item4">4</div>
-        <div class="item">5</div>
+        <div class="item item5">5</div>
         <div class="item">6</div>
     </div>
 
