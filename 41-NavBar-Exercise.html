@@ -3,9 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <title>Navbar Exercise</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: black;
+            color: white;
+        }
+        nav{
+            position: static;
+            margin: 10px;
+            padding: 10px;
+            display: flex;
+            border: 2px solid white;
+            border-radius: 30px;
+            align-items: center;
+            
+        }
+        nav h1{
+            margin-left: 10px;
+            margin-right: auto;
+        }
+        ul{
+            display: flex;
+            justify-content: center;
+            margin-left: auto;
+            list-style: none;
+            column-gap: 10px;
+        }
 
+
+       a{
+            padding: 5px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: white;
+        }
+        a:hover{
+            background-color: rgb(57, 57, 57);
+        }
+
+        .drop{
+            position: relative;
+        }
+
+        .dropmenu{
+            top: 100%;
+            position: absolute;
+            top: 100%;
+            background-color: rgb(27, 27, 27);
+            width: 80px;
+            border: 1px solid white;
+            border-radius: 10px;
+            padding: 10px;
+            display: none;
+        }
+        .dropmenu a{
+            display: block;
+        }
+        .drop:hover .dropmenu{
+            display: block;
+        }
+        #bell{
+            padding: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            border-radius: 50px;
+        }
+
+        .drop i{
+            transition: transform 0.1s;
+        }
+        .drop:hover i{
+            transform: rotate(180deg);
+        }
 
     </style>
 </head>
@@ -13,10 +88,48 @@
     <nav>
         <h1>CodeFlow</h1>
 
-        <div class="button">
-            <input type="button" name="" id="">
-            <button></button>
-        </div>
+    <ul class="menu">
+
+        <li class="drop">
+                <a href="">Products
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
+                <div class="dropmenu">
+                    <a href="">Product 1</a>
+                    <a href="">Product 2</a>
+                    <a href="">Product 3</a>
+                    <a href="">Product 4</a>
+                </div>
+            </li>
+
+            <li class="drop">
+            <a href="">Pricing
+                 <i class="fa-solid fa-chevron-down"></i>
+            </a>
+            <div class="dropmenu">
+                <a href="">Plan 1</a>
+                <a href="">Plan 2</a>
+                <a href="">Plan 3</a>
+            </div>
+        </li>
+        
+        <li class="drop">
+            <a href="">About Us
+                 <i class="fa-solid fa-chevron-down"></i>
+            </a>
+            <div class="dropmenu">
+                <a href="">Career</a>
+                <a href="">Community</a>
+            </div>
+        </li>
+
+        <li>
+            <a href="" id="bell"><i class="fa-solid fa-bell"></i></a>
+            
+        </li>
+        
+      </ul>
+
     </nav>
 
 
